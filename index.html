@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="game">
+		<!-- GAME SCORE -->
+		<div class="game-score">
+			<div class="score">
+				<h1 class="score-player">Player</h1>
+				<span class="score-number-player">0</span>
+			</div>
+			<div class="score">
+				<h1 class="score-computer">Computer</h1>
+				<span class="score-number-computer">0</span>
+			</div>
+		</div>
+		<!---------------->
+		<!-- GAME START -->
+		<div class="game-start">
+			<h1 class="start-title">Rock Paper and Scissors</h1>
+			<button class="button-play">Let's Play</button>
+		</div>
+		<!---------------->
+		<!--- GAME AREA -->
+		<div class="game-area">
+			<div class="game-title">
+	    		<h2 class="title">Choose an option</h2>
+	    		<span class="exit">&#10006;</span>
+			</div>
+	    	<div class="game-hands">
+	      		<img class="game-player-hand hand-changed" src="./images/rock.png" alt="hand-player" />
+	      		<img class="game-computer-hand hand-changed" src="./images/rock.png" alt="hand-computer" />
+	    	</div>
+	    <div class="game-button">
+	      	<button class="game-rock button-game" data-change="rock">rock</button>
+	      	<button class="game-paper button-game" data-change="paper">paper</button>
+	      	<button class="game-scissors button-game" data-change="scissors">scissors</button>
+	    </div>
+	    <!---------------->
+	  </div>
+	</div>
+	<script src="./js/app.js"></script>
+</body>
+</html>

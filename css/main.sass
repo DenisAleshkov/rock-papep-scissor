@@ -1,0 +1,103 @@
+@mixin displayAlign()
+	display: flex
+	align-items: center
+body
+	margin: 0
+	padding: 0
+	font-family: 'Roboto', 'sans-serif'
+*
+	box-sizing: border-box
+button
+	outline: none
+    outline-offset: none
+.game
+	&-score
+		@include displayAlign()
+		justify-content: space-around
+	&-start
+		@include displayAlign()
+		flex-direction: column
+		transition: all 1s ease
+	&-area
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+		pointer-events: none
+		transition: all 1s ease
+	&-title
+		@include displayAlign()
+		justify-content: space-between
+	&-button
+		@include displayAlign()
+		justify-content: space-between
+	&-player-hand
+		transform: rotateY(180deg)
+//--------style for js------
+.fadeIn
+	pointer-events: all
+	opacity: 1
+.fadeOut 
+  	opacity: 0
+//--------------------------
+
+.button-play
+	border: none
+	font-weight: 700
+	color: white
+	font-size: 20px
+	padding: 20px 40px
+	border-radius: 3px
+	background: rgb(64,199,129)
+	box-shadow: 0 -3px rgb(53,167,110) inset
+	transition: 0.2s
+	&:hover
+		cursor: pointer
+		background: rgb(53, 167, 110)
+	&:active
+		background: rgb(33,147,90)
+  		box-shadow: 0 3px rgb(33,147,90) inset
+.button-game
+	@extend .button-play
+	display: inline-block
+.exit
+	cursor: pointer
+@keyframes shakePlayer 
+	0% 
+		transform: rotateY(180deg) translateY(0px)
+	15% 
+		transform: rotateY(180deg) translateY(-50px)
+	25% 
+		transform: rotateY(180deg) translateY(0px)
+	35% 
+		transform: rotateY(180deg) translateY(-50px)
+	50% 
+		transform: rotateY(180deg) translateY(0px)
+	65% 
+		transform: rotateY(180deg) translateY(-50px)
+	75% 
+		transform: rotateY(180deg) translateY(0px)
+	85% 
+		transform: rotateY(180deg) translateY(-50px)
+	100% 
+		transform: rotateY(180deg) translateY(0px)
+@keyframes shakeComputer 
+	0% 
+		transform: translateY(0px)
+	15% 
+		transform: translateY(-50px)
+	25% 
+		transform: translateY(0px)
+	35% 
+		transform: translateY(-50px)
+	50% 
+		transform: translateY(0px)
+	65% 
+		transform: translateY(-50px)
+	75% 
+		transform: translateY(0px)
+	85% 
+		transform: translateY(-50px)
+	100% 
+		transform: translateY(0px)
